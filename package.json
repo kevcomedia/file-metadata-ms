@@ -1,0 +1,30 @@
+{
+  "name": "file-metadata-ms",
+  "version": "1.0.0",
+  "description": "freeCodeCamp file metadata microservice project",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevcomedia/file-metadata-ms.git"
+  },
+  "author": "Kev Comedia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevcomedia/file-metadata-ms/issues"
+  },
+  "homepage": "https://github.com/kevcomedia/file-metadata-ms#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "multer": "^1.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-google": "^0.9.1",
+    "nodemon": "^1.12.1"
+  }
+}
