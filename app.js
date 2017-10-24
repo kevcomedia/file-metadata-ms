@@ -7,7 +7,12 @@ app.use(express.static('public'));
 
 app.post('/upload', upload.single('file'), function(req, res) {
   const {originalname: name, size} = req.file;
-  res.json({name, size});
+
+  if (req.file) {
+    return res.json({name, size});
+  } else {
+    return res.sendStatus(400);
+  }
 });
 
 module.exports = app;
