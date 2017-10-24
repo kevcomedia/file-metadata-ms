@@ -6,9 +6,8 @@ const upload = multer();
 app.use(express.static('public'));
 
 app.post('/upload', upload.single('file'), function(req, res) {
-  const {originalname: name, size} = req.file;
-
   if (req.file) {
+    const {originalname: name, size} = req.file;
     return res.json({name, size});
   } else {
     return res.sendStatus(400);
