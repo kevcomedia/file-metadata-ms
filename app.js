@@ -3,13 +3,11 @@ const multer = require('multer');
 const app = express();
 const upload = multer();
 
-app.get('/', function(req, res) {
-  res.send('Hello world');
-});
+app.use(express.static('public'));
 
 app.post('/upload', upload.single('file'), function(req, res) {
-  const {size} = req.file;
-  res.json({size});
+  const {originalname: name, size} = req.file;
+  res.json({name, size});
 });
 
 module.exports = app;
