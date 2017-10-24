@@ -2,13 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>freeCodeCamp API Project - File Metadata Microservice</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 
 <body>
-  <form action="/upload" enctype="multipart/form-data" method="POST">
-    <input type="file" name="file">
-    <input type="submit" value="Submit">
-  </form>
+  <div class="container">
+    <h1>File Metadata Microservice</h1>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <form class="form-inline" action="/upload" enctype="multipart/form-data" method="POST">
+          <div class="form-group">
+            <input class="btn btn-default" type="file" name="file">
+          </div>
+          <input class="btn btn-primary" type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
